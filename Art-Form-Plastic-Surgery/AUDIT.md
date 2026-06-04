@@ -8,16 +8,15 @@
 
 **Locations:** 801 2nd St N, Safety Harbor, FL 34695 · 1000 W Kennedy Blvd #202, Tampa, FL 33606  
 
-**Knight Logics — source repository (audit, meeting prep, rebuild):**  
-https://github.com/Knight-Logics/High-Prospective-Clients/tree/master/Art-Form-Plastic-Surgery  
+**GitHub repository:** https://github.com/Knight-Logics/Art-Form-Plastic-Surgery  
 
-**Organization:** [Knight-Logics](https://github.com/Knight-Logics) · **Repo:** [High-Prospective-Clients](https://github.com/Knight-Logics/High-Prospective-Clients) (same monorepo as Clearwater Dentist)  
+**Live rebuild preview (GitHub Pages):** https://knight-logics.github.io/Art-Form-Plastic-Surgery/  
 
-**Local rebuild preview:** `cd rebuild` → `npm install` → `npm run build:fast` → `npm run serve` → http://localhost:3456  
+**Audit monorepo copy:** https://github.com/Knight-Logics/High-Prospective-Clients/tree/master/Art-Form-Plastic-Surgery  
 
-**GitHub Pages preview:** https://knight-logics.github.io/High-Prospective-Clients/  
+**Local preview:** `cd rebuild` → `npm install` → `npm run build:fast` → `npm run serve` → http://localhost:3456  
 
-**Accessibility addendum:** [`WAVE.md`](./WAVE.md) — **1-page stapled addendum** (do not re-print this file for WAVE details)
+**Accessibility addendum (WAVE — print with this pack):** [`WAVE.md`](./WAVE.md)
 
 ---
 
@@ -282,7 +281,11 @@ Instagram is the stronger channel for this demographic; TikTok may still be wort
 
 ### Accessibility (PSI + WAVE)
 
-PageSpeed **78** (mobile) / **74** (desktop). WAVE (Jun 4): **9** errors, **15** contrast failures, **14** alerts on homepage — see **`WAVE.md`** addendum (staple behind this audit; includes meeting script and PSI vs WAVE comparison).
+**PageSpeed:** Accessibility **78** (mobile) / **74** (desktop) — understates real issues.
+
+**WAVE (Jun 4, 2026):** **9** missing alt text · **15** contrast errors · **14** alerts on homepage ([full report → `WAVE.md`](./WAVE.md)). Online scan showed a **synchronization warning** — confirm fixes with the WAVE browser extension.
+
+Worth manual keyboard + screen reader pass on **Book Consultation** (Metform) and mobile menu.
 
 ---
 
@@ -493,7 +496,7 @@ Use this as a checklist for tomorrow and follow-up weeks.
 
 ## Links & evidence
 
-- **WAVE addendum (print & staple):** [`WAVE.md`](./WAVE.md)
+- **WAVE accessibility addendum:** [`WAVE.md`](./WAVE.md)
 - **GitHub (audit + rebuild source):** https://github.com/Knight-Logics/High-Prospective-Clients/tree/master/Art-Form-Plastic-Surgery
 - Website (live): https://artformplasticsurgery.com/
 - PageSpeed: https://pagespeed.web.dev/analysis/https-artformplasticsurgery-com/3c8pk00hbx?form_factor=desktop

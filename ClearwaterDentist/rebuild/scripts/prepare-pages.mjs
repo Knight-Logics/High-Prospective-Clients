@@ -7,9 +7,7 @@ import { fileURLToPath } from 'url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, '..');
 const DIST = path.join(ROOT, 'dist');
-const OUT = process.env.PAGES_OUT
-  ? path.resolve(process.env.PAGES_OUT)
-  : path.join(ROOT, 'pages-deploy');
+const OUT = path.join(ROOT, 'pages-deploy');
 const BASE = process.env.PAGES_BASE || '/High-Prospective-Clients/';
 
 async function copyDir(src, dest) {
