@@ -1,0 +1,44 @@
+/**
+ * Homepage hero imagery (layout/heights → artform-landing.css).
+ */
+
+:root {
+  --artform-chrome: 128px;
+  --artform-hero-base: 831px;
+}
+
+.elementor-975 .elementor-element.elementor-element-79fd65b0:not(.elementor-motion-effects-element-type-background),
+.elementor-975 .elementor-element.elementor-element-79fd65b0 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
+  background-image: url('/wp-content/uploads/2024/10/071224-DRCK-0895-Edit-1-scaled.jpg') !important;
+  background-repeat: no-repeat !important;
+  background-position: center top !important;
+}
+
+.artform-hero-media {
+  display: none !important;
+}
+
+@media (min-width: 1025px) {
+  .artform-landing .elementor-element.elementor-element-79fd65b0:not(.elementor-motion-effects-element-type-background),
+  .artform-landing .elementor-element.elementor-element-79fd65b0 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
+    background-size: 100% auto !important;
+  }
+}
+
+@media (max-width: 1024.98px) {
+  .elementor-975 .elementor-element.elementor-element-79fd65b0:not(.elementor-motion-effects-element-type-background),
+  .elementor-975 .elementor-element.elementor-element-79fd65b0 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
+    background-size: 100% auto !important;
+  }
+
+  .elementor-975 .elementor-element.elementor-element-79fd65b0 > .elementor-container {
+    min-height: var(--artform-hero-base) !important;
+  }
+}
+
+@media (min-width: 2560px) {
+  .elementor-975 .elementor-element.elementor-element-79fd65b0:not(.elementor-motion-effects-element-type-background),
+  .elementor-975 .elementor-element.elementor-element-79fd65b0 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
+    background-image: url('/wp-content/uploads/2024/10/071224-DRCK-0895-Edit-1.jpg') !important;
+  }
+}

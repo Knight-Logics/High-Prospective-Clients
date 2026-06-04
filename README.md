@@ -15,7 +15,7 @@ Each client folder contains:
 
 | Client | Domain | Status | Next step |
 |--------|--------|--------|-----------|
-| Art Form Plastic Surgery | [artformplasticsurgery.com](https://artformplasticsurgery.com/) | Audit complete (2026-06-03) | Office visit — systems & automation |
+| Art Form Plastic Surgery | [artformplasticsurgery.com](https://artformplasticsurgery.com/) | Audit + **28-page rebuild** (2026-06-03) | Office visit — systems & automation · [GitHub folder](https://github.com/Knight-Logics/High-Prospective-Clients/tree/master/Art-Form-Plastic-Surgery) |
 | Clearwater Dentist | [clearwaterdentist.com](https://www.clearwaterdentist.com/) | Audit complete + **72-page rebuild** (2026-06-04) | CRM discovery + deploy staging |
 
 ## Related folders

@@ -1,0 +1,141 @@
+/**
+ * First-screen landing: hero + cards pinned above bottom edge.
+ * Height scales 2100px → 3440px (80svh → full viewport). Hero copy clears the cards.
+ */
+
+:root {
+  --artform-chrome: 128px;
+  --artform-hero-base: 831px;
+  /* Distance from viewport bottom — larger = cards sit higher */
+  --artform-cards-bottom: clamp(88px, 11vh, 150px);
+  --artform-cards-stack: clamp(300px, 34vh, 400px);
+  --artform-uw-start: 2100px;
+  --artform-uw-end: 3440px;
+  /* ~80% of first screen at 2100px wide → full screen at 3440px */
+  --artform-landing-min: 80svh;
+  --artform-landing-max: calc(100svh - var(--artform-chrome));
+}
+
+/* ── Landing stack (desktop) ── */
+@media (min-width: 1025px) {
+  .artform-landing {
+    position: relative;
+    width: 100%;
+    /* 1025–2099: live-ish height, still use bottom-pinned cards */
+    min-height: max(var(--artform-hero-base), 88svh);
+    padding-bottom: clamp(200px, 22vh, 280px);
+    margin-bottom: clamp(24px, 3vh, 48px);
+    isolation: isolate;
+  }
+
+  .artform-landing > .elementor-element.elementor-element-79fd65b0 {
+    position: absolute !important;
+    inset: 0 !important;
+    margin: 0 !important;
+    padding-left: 30px !important;
+    padding-right: 0 !important;
+    width: 100% !important;
+    z-index: 1;
+  }
+
+  /* Keep h1 + CTA above the card stack (no overlap) */
+  .artform-landing .elementor-element.elementor-element-79fd65b0 > .elementor-container {
+    min-height: 100% !important;
+    height: 100%;
+    align-items: flex-start !important;
+    align-content: flex-start !important;
+    padding-top: clamp(52px, 9vh, 108px) !important;
+    padding-bottom: calc(var(--artform-cards-stack) + var(--artform-cards-bottom) + 28px) !important;
+    box-sizing: border-box !important;
+  }
+
+  .artform-landing .elementor-element.elementor-element-54fe6ad8 {
+    max-width: min(78%, 980px);
+    flex: 0 1 auto;
+  }
+
+  .artform-landing .elementor-element.elementor-element-30f4f016 .elementor-heading-title {
+    font-size: clamp(2.4rem, 4.2vw, 4.25rem) !important;
+    line-height: 1.08 !important;
+    max-width: 16ch;
+  }
+
+  @media (min-width: 1600px) {
+    .artform-landing .elementor-element.elementor-element-30f4f016 .elementor-heading-title {
+      max-width: 20ch;
+    }
+  }
+
+  .artform-landing .elementor-element.elementor-element-54fe6ad8 > .elementor-widget-wrap {
+    align-content: flex-start !important;
+    align-items: flex-start !important;
+  }
+
+  .artform-landing > .elementor-element.elementor-element-37fbd314 {
+    position: absolute !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: var(--artform-cards-bottom) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    z-index: 10 !important;
+    max-height: var(--artform-cards-stack);
+    overflow: visible;
+  }
+
+  .artform-landing .elementor-element.elementor-element-37fbd314 > .elementor-container {
+    max-width: 1290px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .artform-landing .elementor-element.elementor-element-dcb08e9 > .elementor-element-populated,
+  .artform-landing .elementor-element.elementor-element-54fb05d4 > .elementor-element-populated {
+    margin-top: 0 !important;
+  }
+}
+
+/* Ultrawide width ramp: 80svh @ 2100px → full first screen @ 3440px */
+@media (min-width: 2100px) {
+  .artform-landing {
+    --artform-uw-progress: clamp(
+      0,
+      calc((100vw - var(--artform-uw-start)) / (var(--artform-uw-end) - var(--artform-uw-start))),
+      1
+    );
+    min-height: calc(
+      var(--artform-landing-min) +
+        (var(--artform-landing-max) - var(--artform-landing-min)) * var(--artform-uw-progress)
+    );
+  }
+}
+
+@media (min-width: 3440px) {
+  .artform-landing {
+    min-height: var(--artform-landing-max);
+  }
+}
+
+/* Mobile / tablet: normal document flow */
+@media (max-width: 1024.98px) {
+  .artform-landing {
+    display: block;
+    min-height: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  .artform-landing .elementor-element.elementor-element-79fd65b0 > .elementor-container {
+    padding-bottom: 0 !important;
+    align-items: center !important;
+  }
+
+  .artform-landing > .elementor-element.elementor-element-79fd65b0,
+  .artform-landing > .elementor-element.elementor-element-37fbd314 {
+    position: relative !important;
+    inset: auto !important;
+    bottom: auto !important;
+    max-height: none;
+  }
+}

@@ -3,9 +3,7 @@
 
 # Regenerate with npm run assets (dist already includes built CDN assets)
 ClearwaterDentist/rebuild/public/
-
-# Other local client folders (add when ready to publish)
-Art-Form-Plastic-Surgery/
+Art-Form-Plastic-Surgery/rebuild/public/
 
 # OS / editor
 .DS_Store
