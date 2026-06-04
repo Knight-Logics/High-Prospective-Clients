@@ -26,13 +26,13 @@ jobs:
       - name: Prepare static sites for GitHub Pages
         run: |
           rm -rf pages-deploy
-          mkdir -p pages-deploy/art-form
+          mkdir -p pages-deploy/clearwater-dentist
           PAGES_OUT="$GITHUB_WORKSPACE/pages-deploy" \
             PAGES_BASE="/High-Prospective-Clients/" \
-            node ClearwaterDentist/rebuild/scripts/prepare-pages.mjs
-          PAGES_OUT="$GITHUB_WORKSPACE/pages-deploy/art-form" \
-            PAGES_BASE="/High-Prospective-Clients/art-form/" \
             node Art-Form-Plastic-Surgery/rebuild/scripts/prepare-pages.mjs
+          PAGES_OUT="$GITHUB_WORKSPACE/pages-deploy/clearwater-dentist" \
+            PAGES_BASE="/High-Prospective-Clients/clearwater-dentist/" \
+            node ClearwaterDentist/rebuild/scripts/prepare-pages.mjs
 
       - uses: actions/configure-pages@v5
 

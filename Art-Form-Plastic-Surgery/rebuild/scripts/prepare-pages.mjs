@@ -10,7 +10,7 @@ const DIST = path.join(ROOT, 'dist');
 const OUT = process.env.PAGES_OUT
   ? path.resolve(process.env.PAGES_OUT)
   : path.join(ROOT, 'pages-deploy');
-const BASE = process.env.PAGES_BASE || '/High-Prospective-Clients/art-form/';
+const BASE = process.env.PAGES_BASE || '/High-Prospective-Clients/';
 
 async function copyDir(src, dest) {
   await fs.mkdir(dest, { recursive: true });

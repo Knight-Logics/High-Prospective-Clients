@@ -41,14 +41,14 @@ Original site used `chat.mydashmetrics.com` (often fails to load). Set `data-cha
 
 ## Deploy
 
-**GitHub Pages preview:** https://knight-logics.github.io/High-Prospective-Clients/art-form/
+**GitHub Pages preview:** https://knight-logics.github.io/High-Prospective-Clients/
 
 After `npm run build`, publish with:
 
 ```powershell
 $repo = "E:\Website Audit\High Prospective Clients"
-$env:PAGES_OUT = "$repo\pages-deploy\art-form"
-$env:PAGES_BASE = "/High-Prospective-Clients/art-form/"
+$env:PAGES_OUT = "$repo\pages-deploy"
+$env:PAGES_BASE = "/High-Prospective-Clients/"
 node scripts/prepare-pages.mjs
 ```
 
