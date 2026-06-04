@@ -15,7 +15,7 @@ https://github.com/Knight-Logics/High-Prospective-Clients/tree/master/Art-Form-P
 
 **Local rebuild preview:** `cd rebuild` → `npm install` → `npm run build:fast` → `npm run serve` → http://localhost:3456  
 
-**Accessibility addendum (WAVE — print with this pack):** [`WAVE.md`](./WAVE.md)
+**Accessibility addendum:** [`WAVE.md`](./WAVE.md) — **1-page stapled addendum** (do not re-print this file for WAVE details)
 
 ---
 
@@ -280,11 +280,7 @@ Instagram is the stronger channel for this demographic; TikTok may still be wort
 
 ### Accessibility (PSI + WAVE)
 
-**PageSpeed:** Accessibility **78** (mobile) / **74** (desktop) — understates real issues.
-
-**WAVE (Jun 4, 2026):** **9** missing alt text · **15** contrast errors · **14** alerts on homepage ([full report → `WAVE.md`](./WAVE.md)). Online scan showed a **synchronization warning** — confirm fixes with the WAVE browser extension.
-
-Worth manual keyboard + screen reader pass on **Book Consultation** (Metform) and mobile menu.
+PageSpeed **78** (mobile) / **74** (desktop). WAVE (Jun 4): **9** errors, **15** contrast failures, **14** alerts on homepage — see **`WAVE.md`** addendum (staple behind this audit; includes meeting script and PSI vs WAVE comparison).
 
 ---
 
@@ -495,7 +491,7 @@ Use this as a checklist for tomorrow and follow-up weeks.
 
 ## Links & evidence
 
-- **WAVE accessibility addendum:** [`WAVE.md`](./WAVE.md)
+- **WAVE addendum (print & staple):** [`WAVE.md`](./WAVE.md)
 - **GitHub (audit + rebuild source):** https://github.com/Knight-Logics/High-Prospective-Clients/tree/master/Art-Form-Plastic-Surgery
 - Website (live): https://artformplasticsurgery.com/
 - PageSpeed: https://pagespeed.web.dev/analysis/https-artformplasticsurgery-com/3c8pk00hbx?form_factor=desktop
