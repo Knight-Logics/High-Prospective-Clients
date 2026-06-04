@@ -1,0 +1,16 @@
+# Dependencies
+**/node_modules/
+
+# Regenerate with npm run assets (dist already includes built CDN assets)
+ClearwaterDentist/rebuild/public/
+
+# Other local client folders (add when ready to publish)
+Art-Form-Plastic-Surgery/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.log
+
+# Deploy staging output
+ClearwaterDentist/rebuild/pages-deploy/
