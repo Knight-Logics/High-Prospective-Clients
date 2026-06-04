@@ -4,8 +4,8 @@
 # Regenerate with npm run assets (dist already includes built CDN assets)
 ClearwaterDentist/rebuild/public/
 
-# Other local client folders (add when ready to publish)
-Art-Form-Plastic-Surgery/
+# Art Form rebuild — source assets in public/css + public/js; wp-content copied at build
+Art-Form-Plastic-Surgery/rebuild/public/wp-content/
 
 # OS / editor
 .DS_Store
