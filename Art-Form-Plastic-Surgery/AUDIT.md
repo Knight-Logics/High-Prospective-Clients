@@ -15,6 +15,8 @@ https://github.com/Knight-Logics/High-Prospective-Clients/tree/master/Art-Form-P
 
 **Local rebuild preview:** `cd rebuild` → `npm install` → `npm run build:fast` → `npm run serve` → http://localhost:3456  
 
+**GitHub Pages preview:** https://knight-logics.github.io/High-Prospective-Clients/art-form/  
+
 **Accessibility addendum:** [`WAVE.md`](./WAVE.md) — **1-page stapled addendum** (do not re-print this file for WAVE details)
 
 ---

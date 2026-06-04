@@ -41,7 +41,20 @@ Original site used `chat.mydashmetrics.com` (often fails to load). Set `data-cha
 
 ## Deploy
 
-Upload `dist/` to Hostinger (or any static host). Map all old URLs with same paths. Add 301s only if paths change.
+**GitHub Pages preview:** https://knight-logics.github.io/High-Prospective-Clients/art-form/
+
+After `npm run build`, publish with:
+
+```powershell
+$repo = "E:\Website Audit\High Prospective Clients"
+$env:PAGES_OUT = "$repo\pages-deploy\art-form"
+$env:PAGES_BASE = "/High-Prospective-Clients/art-form/"
+node scripts/prepare-pages.mjs
+```
+
+Push to `master` on [High-Prospective-Clients](https://github.com/Knight-Logics/High-Prospective-Clients) — the deploy workflow copies `dist/` and injects the base URL automatically.
+
+**Production:** Upload `dist/` to Hostinger (or any static host). Map all old URLs with same paths. Add 301s only if paths change.
 
 ## Not in v1
 
