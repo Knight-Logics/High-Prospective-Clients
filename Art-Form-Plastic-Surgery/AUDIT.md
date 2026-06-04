@@ -15,6 +15,8 @@ https://github.com/Knight-Logics/High-Prospective-Clients/tree/master/Art-Form-P
 
 **Local rebuild preview:** `cd rebuild` → `npm install` → `npm run build:fast` → `npm run serve` → http://localhost:3456  
 
+**Accessibility addendum (WAVE — print with this pack):** [`WAVE.md`](./WAVE.md)
+
 ---
 
 ## Executive summary
@@ -33,7 +35,7 @@ The biggest gaps are **technical performance on mobile** (critical for patients 
 | Site performance (mobile) | D | PSI 42 — LCP 26.5s is a conversion killer |
 | Site performance (desktop) | C+ | PSI 70 — fixable with caching/CSS defer |
 | Structured data | C- | Only breadcrumbs validate for rich results |
-| Accessibility | C+ | PSI 78 mobile / 74 desktop |
+| Accessibility | D+ | WAVE: 9 alt errors, 15 contrast; PSI 78 mobile (see `WAVE.md`) |
 | Social | B- | IG solid; TikTok high effort, low reach |
 | Automation readiness | ? | Omnisend, forms, chat, popups — needs discovery |
 
@@ -237,11 +239,9 @@ From SERP observation (Jun 3, 2026):
 | Favicon | ✅ Custom | ❌ Generic globe |
 | Extensions | Sitelinks | About Dr. K, Gallery, Services, Payment Plans |
 
-**Favicon on ads:** Google often pulls ad favicons from the **domain root** over time. The globe icon usually means: new/uncrawled asset, **www vs non-www** inconsistency, or missing **square favicon** in Search Console / site settings. Organic proves the asset exists (`150x150` PNG in `/wp-content/uploads/`).
+**Why the ad shows a globe but organic shows your logo:** The ad’s final URL is `www.artformplasticsurgery.com/dr-kieliszak/consultation`, which returns **HTTP 404** (verified Jun 4, 2026). Google can’t pull a favicon from a missing page. The **homepage and `/book-consultation/` both return 200** and include `link rel="icon"` to the gold profile PNG — the favicon exists; the **ad URL is wrong**.
 
-**Action:** Verify Search Console property for both host variants; ensure `link rel="icon"` on all landing templates; align ad final URLs to canonical `https://artformplasticsurgery.com/...` paths.
-
-**Note:** `/dr-kieliszak/consultation` returned **404** on non-www during scan; `/book-consultation/` returns **200** with favicon. Confirm which URL ads actually land on — possible broken or redirected path on `www` only.
+**Action:** Point ads to `https://artformplasticsurgery.com/book-consultation/` (or homepage + UTMs); 301 redirect the old consultation path; add `/favicon.ico` at domain root; verify www + non-www in Search Console. Details: [`WAVE.md` § Google Ads favicon](./WAVE.md#google-ads-favicon--why-organic-shows-the-logo-but-the-ad-shows-a-globe).
 
 ---
 
@@ -278,9 +278,13 @@ Instagram is the stronger channel for this demographic; TikTok may still be wort
 
 ---
 
-### Accessibility (PSI)
+### Accessibility (PSI + WAVE)
 
-Score **78** (mobile) — common Elementor issues: contrast, heading order, alt text on decorative vs content images, focus states on mobile menu. Worth manual keyboard + screen reader pass on **Book Consultation** form (Metform).
+**PageSpeed:** Accessibility **78** (mobile) / **74** (desktop) — understates real issues.
+
+**WAVE (Jun 4, 2026):** **9** missing alt text · **15** contrast errors · **14** alerts on homepage ([full report → `WAVE.md`](./WAVE.md)). Online scan showed a **synchronization warning** — confirm fixes with the WAVE browser extension.
+
+Worth manual keyboard + screen reader pass on **Book Consultation** (Metform) and mobile menu.
 
 ---
 
@@ -491,6 +495,7 @@ Use this as a checklist for tomorrow and follow-up weeks.
 
 ## Links & evidence
 
+- **WAVE accessibility addendum:** [`WAVE.md`](./WAVE.md)
 - **GitHub (audit + rebuild source):** https://github.com/Knight-Logics/High-Prospective-Clients/tree/master/Art-Form-Plastic-Surgery
 - Website (live): https://artformplasticsurgery.com/
 - PageSpeed: https://pagespeed.web.dev/analysis/https-artformplasticsurgery-com/3c8pk00hbx?form_factor=desktop
